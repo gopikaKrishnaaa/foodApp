@@ -1,0 +1,190 @@
+/* Navigation style*/
+.nav-bgcolor{
+  background-color: hsla(0, 89%, 50%);
+  color: white;
+}
+.brand {
+  font-size: 25px;
+  color: white;
+  font-weight: 900;
+
+}
+.carticon{
+  font-size: 25px;
+}
+.navbar {
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+}
+
+/HomePage/
+
+.home-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  gap: 30px;
+
+}
+.pizza,.burger {
+  text-align: center;
+  color :  hsla(2, 94%, 50%, 0.993);
+  /* box-shadow: 3px 4px 10px black; */
+}
+:is(.pizza,.burger) img {
+  box-shadow: 5px 5px 10px black;
+  padding: 8px;
+  cursor: pointer;
+  
+}
+
+
+
+
+/Burger and pizza Page/
+
+.myh1 {
+  text-align: center;
+}
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.burger-types,.pizza-types{
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  width: 60%;
+  /* border: 2px solid rgba(180, 12, 6, 0.938);    */
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px rgba(10, 9, 9, 0.795);
+  /* box-shadow: -5px -5px 8px rgb(182, 38, 38); */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+}
+
+.image-box img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  /* border: 2px solid black; */
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0);
+}
+.content-box h3 {
+  color :  rgba(180, 12, 6, 0.993);
+}
+.price {
+  font-size: 18px;
+  font-weight: 700;
+}
+.description  label {
+  font-size: 18px;
+  font-weight: 600;
+}
+.description {
+  font-size: 16px;
+}
+.content-box .orderbtn {
+  background-color: hsla(2, 94%, 36%, 0.993) ;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+}
+.content-box .orderbtn:hover {
+  background-color: hsla(2, 94%, 50%, 0.993) ;
+}
+
+.homebtn {
+  text-align: center;
+  
+}
+.homebtn button {
+  background-color: hsl(120, 59%,40%);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.homebtn button:hover {
+  background-color: hsl(120, 59%,50%);
+}
+
+/Cart style/
+.carthomebtn{
+  margin-top: 10px;
+}
+.removebtn{
+  background-color: hsl(182, 73%, 38%);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.removebtn:hover {
+  background-color: hsl(182, 73%, 50%);
+
+}
+.clearcart{
+  background-color: rgba(0, 0, 0, 0.801);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding :  5px 15px;
+  margin-right: 10px;
+  
+}
+.buynow {
+  background-color: rgb(255, 117, 18);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding :  5px 20px;
+
+}
+.ordered-items{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.cartbox{
+  border: 2px solid rgb(156, 75, 75);
+  border-radius: 5px;
+  padding :  10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+.buy-box {
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width : 768px) {
+  .burger-types,.pizza-types{
+      flex-direction: column;
+      align-items: center;
+  }
+  .content-box{
+      text-align: center  ;
+  }
+  .navbar{
+      padding: 10px;
+  }
+  .home-container{
+      flex-direction: column;
+  }
+}
+
