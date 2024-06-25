@@ -1,34 +1,47 @@
+import React from "react";
+import { FoodData } from "./FoodData"; 
+import {useNavigate} from 'react-router-dom'
 
-import React from 'react'
+const Burger = ({addCart}) => {
+    const nav = useNavigate();
+    const goToHome = () => {
+        nav("/");
+    }
 
-
-const Burger = ({FoodData,addCart}) => {
+    function toPlaceOrder (product) {
+      
+        addCart(product);
+        
+      }
   return (
-    <>
-    <div>
-      {FoodData.map((item,i)=>{
-        return(
-         <>
-          <h1>{FoodData[1].subItemsData.name}</h1>
-          <div>
-            {FoodData[1].subItemsData.subItems.map((subItem,i)=>{
-              return(
-                <>
-                <h2>{subItem.name}</h2>
-                <img src={subItem.image} />
-                <p>{subItem.description}</p>
-                <h4>Price : {subItem.price}</h4>
-                <button onClick={()=>addCart(subItem)}>Add to cart</button>
-                </>
-              )
-            })}
-          </div>
-         </>
-        )
-      })}
+    <div className="burger-container">
+      <h1 className="myh1">{FoodData[1].subItemsData.name}</h1>
+      <div className="inner-container">
+        {FoodData[1].subItemsData.subItems.map((item, index) => {
+          return (
+            <div key={index} className="burger-types">
+              <div className="image-box">
+                <img src={item.image} alt="burger" />
+              </div>
+              <div className="content-box">
+                <h3>{item.name}</h3>
+                <p className="price">
+                  <label >Price</label> : {item.price}
+                </p>
+                <p className="description">
+                  <label >Description</label> : {item.description}
+                </p>
+                <button className="orderbtn" onClick={() => toPlaceOrder(item)}>Order Now</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div  className="homebtn">
+          <button onClick={goToHome}>Go Home</button>
+      </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Burger
+export default Burger;
